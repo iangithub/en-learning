@@ -41,7 +41,7 @@
     app.replaceChildren(
       el("div", { class: "page-head" },
         el("h1", {}, "TOEIC 高頻單字"),
-        el("p", {}, `嚴選 ${INDEX.total.toLocaleString()} 個五星高頻字彙，依商務情境分類。字卡翻面看詞性變化、例句與考點。`)),
+        el("p", {}, `收錄 ${INDEX.total.toLocaleString()} 個字彙，依商務情境分類、★1–★5 頻率分層（★5 最高頻）。字卡翻面看詞性變化、例句與考點。`)),
       el("div", { class: "card-grid" },
         ...INDEX.categories.map((c) =>
           el("button", { class: "grid-card", onclick: () => (location.hash = `#${c.slug}`), "aria-label": c.category },
@@ -71,11 +71,15 @@
     let query = "";
     let idx = 0;
     let flipped = false;
+    let starSel;
+    try { starSel = new Set(JSON.parse(localStorage.getItem("opt:stars") || "[5,4,3,2,1]")); }
+    catch { starSel = new Set([5, 4, 3, 2, 1]); }
 
     const view = el("section", { class: "study" });
 
     function visible() {
       let v = shuffled ? order : words.map((_, i) => i);
+      v = v.filter((i) => starSel.has(words[i].star));
       if (onlyNew) v = v.filter((i) => !store.has(words[i].id));
       if (query) {
         const q = query.toLowerCase();
@@ -111,8 +115,22 @@
           toggle("🆕 只看未學會", onlyNew, () => { onlyNew = !onlyNew; idx = 0; flipped = false; paint(); }),
           toggle("🙈 遮中文", hideZh.get(), () => { hideZh.set(!hideZh.get()); paint(); }),
           toggle("🔊 自動發音", autoplay.get(), () => { autoplay.set(!autoplay.get()); paint(); })),
+        el("div", { class: "study-controls star-row", role: "group", "aria-label": "星級篩選" },
+          el("span", { class: "star-label" }, "星級"),
+          ...[5, 4, 3, 2, 1].map((n) => {
+            const cnt = words.reduce((a, w) => a + (w.star === n ? 1 : 0), 0);
+            return el("button", {
+              class: "toggle-btn star-chip", "aria-pressed": String(starSel.has(n)),
+              title: `${cnt} 字`,
+              onclick: () => {
+                starSel.has(n) ? starSel.delete(n) : starSel.add(n);
+                localStorage.setItem("opt:stars", JSON.stringify([...starSel]));
+                idx = 0; flipped = false; paint();
+              } }, `★${n}`, el("small", {}, ` ${cnt}`));
+          })),
         el("div", { id: "cardZone" },
-          w ? cardEl(w) : el("div", { class: "empty-note" }, query ? "找不到符合的單字" : "這個分類都學會了 🎉"),
+          w ? cardEl(w) : el("div", { class: "empty-note" },
+            query ? "找不到符合的單字" : (starSel.size === 0 ? "請至少選擇一個星級" : (onlyNew ? "這個範圍都學會了 🎉" : "沒有符合篩選的單字"))),
           w ? navEl(v, w) : null),
         w ? el("div", { class: "kbd-hint" },
           el("kbd", {}, "←"), " ", el("kbd", {}, "→"), " 換卡　",
@@ -128,7 +146,8 @@
       const v = visible();
       const w = current();
       zone.replaceChildren(
-        w ? cardEl(w) : el("div", { class: "empty-note" }, query ? "找不到符合的單字" : "這個分類都學會了 🎉"),
+        w ? cardEl(w) : el("div", { class: "empty-note" },
+          query ? "找不到符合的單字" : (starSel.size === 0 ? "請至少選擇一個星級" : (onlyNew ? "這個範圍都學會了 🎉" : "沒有符合篩選的單字"))),
         w ? navEl(v, w) : null);
     }
 
@@ -149,7 +168,7 @@
 
       const front = el("div", { class: "face face-front" },
         el("div", { class: "badges" },
-          el("span", { class: "badge" }, `★5 · ${w.score}`),
+          el("span", { class: "badge" }, `${"★".repeat(w.star)} · ${w.score}`),
           learned ? el("span", { class: "badge learned" }, "✓ 已學會") : el("span", {})),
         el("div", { class: "en", lang: "en" }, w.word),
         el("div", { class: "pill-row", style: "justify-content:center" },

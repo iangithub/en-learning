@@ -245,6 +245,12 @@ button { font-family: inherit; }
 .toggle-btn[aria-pressed="true"] { background: var(--teal-soft); border-color: var(--teal); color: var(--teal-dark); font-weight: 600; }
 .toggle-btn:hover { box-shadow: var(--shadow-sm); }
 
+.star-row { padding-top: 0; }
+.star-label { font-size: .8rem; color: var(--text-3); }
+.star-chip { padding: 5px 12px; }
+.star-chip small { font-size: .72rem; opacity: .75; }
+.star-chip[aria-pressed="true"] { background: color-mix(in srgb, var(--amber) 22%, transparent); border-color: var(--amber); color: var(--text); }
+
 /* --- Flashcard --- */
 .flash-wrap { perspective: 1600px; max-width: 660px; margin: 0 auto; }
 

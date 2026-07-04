@@ -1,80 +1,185 @@
 {
- "total": 2722,
+ "total": 11169,
  "categories": [
   {
    "category": "辦公日常",
    "slug": "office",
-   "count": 1108
-  },
-  {
-   "category": "溝通互動",
-   "slug": "communication",
-   "count": 387
+   "count": 2951,
+   "stars": {
+    "5": 1090,
+    "4": 1160,
+    "3": 509,
+    "2": 116,
+    "1": 76
+   }
   },
   {
    "category": "營運管理",
    "slug": "operations",
-   "count": 180
+   "count": 1454,
+   "stars": {
+    "5": 179,
+    "4": 491,
+    "3": 504,
+    "2": 200,
+    "1": 80
+   }
   },
   {
-   "category": "旅遊與交通",
-   "slug": "travel",
-   "count": 149
-  },
-  {
-   "category": "人力資源",
-   "slug": "hr",
-   "count": 137
-  },
-  {
-   "category": "採購與物流",
-   "slug": "procurement",
-   "count": 122
+   "category": "溝通互動",
+   "slug": "communication",
+   "count": 1336,
+   "stars": {
+    "5": 385,
+    "4": 397,
+    "3": 309,
+    "2": 130,
+    "1": 115
+   }
   },
   {
    "category": "一般專業",
    "slug": "general",
-   "count": 120
+   "count": 1132,
+   "stars": {
+    "5": 120,
+    "4": 196,
+    "3": 348,
+    "2": 285,
+    "1": 183
+   }
   },
   {
-   "category": "金融與會計",
-   "slug": "finance",
-   "count": 115
-  },
-  {
-   "category": "行銷與銷售",
-   "slug": "marketing",
-   "count": 110
-  },
-  {
-   "category": "住宿與餐飲",
-   "slug": "hospitality",
-   "count": 100
+   "category": "人力資源",
+   "slug": "hr",
+   "count": 713,
+   "stars": {
+    "5": 135,
+    "4": 290,
+    "3": 203,
+    "2": 61,
+    "1": 24
+   }
   },
   {
    "category": "科技與技術支援",
    "slug": "tech",
-   "count": 97
+   "count": 601,
+   "stars": {
+    "5": 96,
+    "4": 161,
+    "3": 151,
+    "2": 86,
+    "1": 107
+   }
   },
   {
-   "category": "會議與簡報",
-   "slug": "meetings",
-   "count": 30
+   "category": "旅遊與交通",
+   "slug": "travel",
+   "count": 588,
+   "stars": {
+    "5": 147,
+    "4": 162,
+    "3": 103,
+    "2": 53,
+    "1": 123
+   }
   },
   {
-   "category": "客戶服務",
-   "slug": "customer-service",
-   "count": 27
+   "category": "行銷與銷售",
+   "slug": "marketing",
+   "count": 534,
+   "stars": {
+    "5": 109,
+    "4": 177,
+    "3": 122,
+    "2": 60,
+    "1": 66
+   }
+  },
+  {
+   "category": "採購與物流",
+   "slug": "procurement",
+   "count": 470,
+   "stars": {
+    "5": 121,
+    "4": 177,
+    "3": 104,
+    "2": 42,
+    "1": 26
+   }
+  },
+  {
+   "category": "金融與會計",
+   "slug": "finance",
+   "count": 450,
+   "stars": {
+    "5": 113,
+    "4": 129,
+    "3": 146,
+    "2": 47,
+    "1": 15
+   }
+  },
+  {
+   "category": "住宿與餐飲",
+   "slug": "hospitality",
+   "count": 399,
+   "stars": {
+    "5": 98,
+    "4": 81,
+    "3": 64,
+    "2": 51,
+    "1": 105
+   }
   },
   {
    "category": "法務合規與安全",
    "slug": "legal",
-   "count": 20
+   "count": 245,
+   "stars": {
+    "5": 20,
+    "4": 54,
+    "3": 90,
+    "2": 62,
+    "1": 19
+   }
   },
   {
    "category": "物業與不動產",
    "slug": "real-estate",
-   "count": 20
+   "count": 145,
+   "stars": {
+    "5": 20,
+    "4": 49,
+    "3": 39,
+    "2": 26,
+    "1": 11
+   }
+  },
+  {
+   "category": "會議與簡報",
+   "slug": "meetings",
+   "count": 83,
+   "stars": {
+    "5": 29,
+    "4": 30,
+    "3": 20,
+    "2": 3,
+    "1": 1
+   }
+  },
+  {
+   "category": "客戶服務",
+   "slug": "customer-service",
+   "count": 68,
+   "stars": {
+    "5": 27,
+    "4": 29,
+    "3": 12,
+    "2": 0,
+    "1": 0
+   }
   }
  ]
 }
