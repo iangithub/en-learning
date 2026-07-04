@@ -1,0 +1,126 @@
+{
+ "total": 200,
+ "totalLines": 4146,
+ "categories": [
+  {
+   "unit": 1,
+   "title": "認識新朋友",
+   "count": 10,
+   "lines": 209
+  },
+  {
+   "unit": 2,
+   "title": "家庭對話",
+   "count": 10,
+   "lines": 209
+  },
+  {
+   "unit": 3,
+   "title": "餐廳點餐",
+   "count": 10,
+   "lines": 206
+  },
+  {
+   "unit": 4,
+   "title": "購物與結帳",
+   "count": 10,
+   "lines": 204
+  },
+  {
+   "unit": 5,
+   "title": "住家維修",
+   "count": 10,
+   "lines": 209
+  },
+  {
+   "unit": 6,
+   "title": "旅行與住宿",
+   "count": 10,
+   "lines": 210
+  },
+  {
+   "unit": 7,
+   "title": "健康與醫療",
+   "count": 10,
+   "lines": 210
+  },
+  {
+   "unit": 8,
+   "title": "客訴與抱怨",
+   "count": 10,
+   "lines": 206
+  },
+  {
+   "unit": 9,
+   "title": "交朋友閒聊",
+   "count": 10,
+   "lines": 206
+  },
+  {
+   "unit": 10,
+   "title": "心靈對話",
+   "count": 10,
+   "lines": 212
+  },
+  {
+   "unit": 11,
+   "title": "開玩笑幽默",
+   "count": 10,
+   "lines": 206
+  },
+  {
+   "unit": 12,
+   "title": "生活分享、社交邀約與拒絕",
+   "count": 10,
+   "lines": 206
+  },
+  {
+   "unit": 13,
+   "title": "工作與面試",
+   "count": 10,
+   "lines": 210
+  },
+  {
+   "unit": 14,
+   "title": "工作閒聊",
+   "count": 10,
+   "lines": 211
+  },
+  {
+   "unit": 15,
+   "title": "新聞時事探討",
+   "count": 10,
+   "lines": 206
+  },
+  {
+   "unit": 16,
+   "title": "價值觀傳遞",
+   "count": 10,
+   "lines": 208
+  },
+  {
+   "unit": 17,
+   "title": "電話溝通與預約",
+   "count": 10,
+   "lines": 207
+  },
+  {
+   "unit": 18,
+   "title": "問路與大眾運輸",
+   "count": 10,
+   "lines": 202
+  },
+  {
+   "unit": 19,
+   "title": "咖啡廳點餐與外送",
+   "count": 10,
+   "lines": 203
+  },
+  {
+   "unit": 20,
+   "title": "天氣閒聊與週末計畫",
+   "count": 10,
+   "lines": 206
+  }
+ ]
+}

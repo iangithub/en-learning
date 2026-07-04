@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Batch-generate all MP3 audio with Azure Speech TTS. Resumable (skips existing files).
-Usage: python 04_tts.py [toeic|listening|all]
-Voices: female=Ava, male=Andrew — listening dialogues alternate voices per line."""
+Usage: python 04_tts.py [toeic|listening|dialog|all]
+Voices: female=Ava, male=Andrew — listening lines alternate; dialog lines follow speaker."""
 import glob
 import json
 import os
@@ -46,6 +46,17 @@ if mode in ("listening", "all"):
                 jobs.append((s["en"], os.path.join(outdir, f"{s['id']}.mp3"), voice))
     else:
         print("listening.json not ready, skipping listening audio")
+
+if mode in ("dialog", "all"):
+    outdir = os.path.join(ROOT, "audio", "dialog")
+    os.makedirs(outdir, exist_ok=True)
+    for path in sorted(glob.glob(os.path.join(ROOT, "data", "dialogues", "*.json"))):
+        with open(path, encoding="utf-8") as f:
+            cat = json.load(f)
+        for d in cat["dialogues"]:
+            for l in d["lines"]:
+                voice = MALE if l["s"] == "M" else FEMALE
+                jobs.append((l["en"], os.path.join(outdir, f"{d['id']}_{l['n']:02d}.mp3"), voice))
 
 todo = [j for j in jobs if not os.path.exists(j[1])]
 print(f"jobs total={len(jobs)} todo={len(todo)}")
