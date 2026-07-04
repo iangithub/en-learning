@@ -1,6 +1,9 @@
 # specs are source material, not published
 spec/
 
+# internal maintenance notes
+PROJECT_NOTES.md
+
 # generation caches / intermediates
 tools/.cache/
 tools/.imgcache/
