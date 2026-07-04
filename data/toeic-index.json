@@ -1,0 +1,80 @@
+{
+ "total": 2722,
+ "categories": [
+  {
+   "category": "辦公日常",
+   "slug": "office",
+   "count": 1108
+  },
+  {
+   "category": "溝通互動",
+   "slug": "communication",
+   "count": 387
+  },
+  {
+   "category": "營運管理",
+   "slug": "operations",
+   "count": 180
+  },
+  {
+   "category": "旅遊與交通",
+   "slug": "travel",
+   "count": 149
+  },
+  {
+   "category": "人力資源",
+   "slug": "hr",
+   "count": 137
+  },
+  {
+   "category": "採購與物流",
+   "slug": "procurement",
+   "count": 122
+  },
+  {
+   "category": "一般專業",
+   "slug": "general",
+   "count": 120
+  },
+  {
+   "category": "金融與會計",
+   "slug": "finance",
+   "count": 115
+  },
+  {
+   "category": "行銷與銷售",
+   "slug": "marketing",
+   "count": 110
+  },
+  {
+   "category": "住宿與餐飲",
+   "slug": "hospitality",
+   "count": 100
+  },
+  {
+   "category": "科技與技術支援",
+   "slug": "tech",
+   "count": 97
+  },
+  {
+   "category": "會議與簡報",
+   "slug": "meetings",
+   "count": 30
+  },
+  {
+   "category": "客戶服務",
+   "slug": "customer-service",
+   "count": 27
+  },
+  {
+   "category": "法務合規與安全",
+   "slug": "legal",
+   "count": 20
+  },
+  {
+   "category": "物業與不動產",
+   "slug": "real-estate",
+   "count": 20
+  }
+ ]
+}

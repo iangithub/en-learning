@@ -1,0 +1,12 @@
+# specs are source material, not published
+spec/
+
+# generation caches / intermediates
+tools/.cache/
+tools/.imgcache/
+data/listening_raw.json
+
+# local junk
+*.tmp
+Thumbs.db
+.DS_Store
