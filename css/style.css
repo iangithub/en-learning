@@ -198,6 +198,7 @@ button { font-family: inherit; }
   background: var(--bg-card); border: 1px solid var(--border);
   border-radius: var(--radius-lg); overflow: hidden; cursor: pointer;
   text-align: left; padding: 0;
+  color: var(--text); font-family: inherit;
   box-shadow: var(--shadow-sm);
   transition: transform .22s var(--ease), box-shadow .22s var(--ease);
 }
